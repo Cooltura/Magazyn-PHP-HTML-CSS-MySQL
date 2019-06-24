@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+<title>Przyklad - wzorzec MVC + panel administracyjny</title>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="mystyle.css" type="text/css" />
+</head>
+<body>
+
+<div id="strona">
+
+    <div id="naglowek">
+	<h2> <a href="widok_glowna.php"><img src="zdjecia/baner.jpg" alt="zdkecie"/></a> </h2>
+    </div>
+<div id="Kolumny">
+    <div id="kolumnaLewa">
+
+       
+
+        <div id="menuPionowe">
+		<ul class="ukladPionowy">
+
+			<li><a href="widok_nowe_produkty.php" ><br/>NOWOŚCI  </a></li>
+			<li><a href="widok_glowna.php?">O FIRMIE  </a></li>
+			<li><a href="widok_moje_konto.php"> MOJE KONTO  </a></li>
+			<li><a href="logout.php">WYLOGUJ SIĘ  </a></li>
+		
+		</ul>
+        </div>
+
+    </div>
+
+    <div id="kolumnaPrawa">
+
+        <div id="menuPoziome">
+		<ul class="ukladPoziomy">
+			<li><a href="widok_produkty.php?product=szafa&p=1" >SZAFY</a></li>
+			<li><a href="widok_produkty.php?product=lozko&p=1" >LOZKA</a></li>
+			<li><a href="widok_produkty.php?product=stol&p=1" >STOLY</a></li>
+			<li><a href="widok_produkty.php?product=krzeslo&p=1" >KRZESLA</a></li>
+			<li><a href="widok_produkty.php?product=drzwi&p=1" >DRZWI</a></li>
+		</ul>
+        </div>
+		
+        <div id="tresc" >
+		
+		<p class="statystyki">Sprzedaze:</p>
+
+<table class='statystyki_tabele'><tr>
+<td class='statystyki_tabele'><b>Data</b></td>
+<td class='statystyki_tabele'><b>Suma zarobiona w ciagu dnia (zł)</b></td>
+<td class='statystyki_tabele'><b>Ilosc sprzedazy</b></td>
+</tr>
+</table>
+		<table tal:repeat="item Sprzedane_produkty_dzien" class='statystyki_tabele' >
+<tr>
+<td class='statystyki_tabele'>${item/data} </td>
+<td class='statystyki_tabele'>${item/suma}</td>
+<td class='statystyki_tabele'>${item/ilosc_zakupow}</td>
+</tr>
+</table>
+
+<p class="statystyki">Najczesciej sprzedawane:</p>
+<table class='statystyki_tabele'><tr>
+<td class='statystyki_tabele'><b>Nazwa</b></td>
+<td class='statystyki_tabele'><b>Ile sztuk sprzedano</b></td>
+</tr>
+</table>
+		<table tal:repeat="item Sprzedane_produkty_najlepsze" class='statystyki_tabele' >
+<tr>
+<td class='statystyki_tabele'>${item/nazwa} </td>
+<td class='statystyki_tabele'>${item/suma}</td>
+</tr>
+</table>
+
+<br/><p class="statystyki">Ostatnie  5 zakupow</p>
+
+<table class='zakupione_produkty'>
+<tr>
+<td class='zakupione_produkty'><b>Nazwa Produktu</b></td>
+<td class='zakupione_produkty'><b>Ilosc</b></td>
+<td class='zakupione_produkty'><b>Cena zakupu</b></td>
+<td class='zakupione_produkty'><b>Godzina zakupu</b></td>
+<td class='zakupione_produkty'><b>Data zakupu</b></td>
+</tr>
+</table>
+<table tal:repeat="item shop" class='zakupione_produkty'>
+<tr>
+	<td class='zakupione_produkty'>${item/nazwa_productu}</td>
+	<td class='zakupione_produkty'>${item/ilosc_produktow}</td>
+	<td class='zakupione_produkty'>${item/cena_zakupow} zł</td>
+	<td class='zakupione_produkty'>${item/godzina_zakupu}</td>
+	<td class='zakupione_produkty'>${item/data_zakupu}</td>
+	
+</tr>
+</table>
+
+
+		</div>
+		
+	</div>
+	</div>
+    <div id="stopka">
+    </div>
+
+</div>
+
+</body>
+</html>

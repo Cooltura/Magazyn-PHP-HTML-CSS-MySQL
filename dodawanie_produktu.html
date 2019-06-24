@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+<title>Przyklad - wzorzec MVC + panel administracyjny</title>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="mystyle.css" type="text/css" />
+</head>
+<body>
+
+<div id="strona">
+
+    <div id="naglowek">
+	<h2> <a href="widok_glowna.php"><img src="zdjecia/baner.jpg" alt="zdkecie"/></a> </h2>
+    </div>
+<div id="Kolumny">
+    <div id="kolumnaLewa">
+
+       
+
+        <div id="menuPionowe">
+		<ul class="ukladPionowy">
+		
+			<li><a href="widok_nowe_produkty.php" ><br/>NOWOŚCI  </a></li>
+			<li><a href="widok_glowna.php?">O FIRMIE  </a></li>
+			<li><a href="widok_moje_konto.php"> MOJE KONTO  </a></li>
+			<li><a href="logout.php">WYLOGUJ SIĘ  </a></li>
+		
+		</ul>
+        </div>
+
+    </div>
+
+    <div id="kolumnaPrawa">
+
+        <div id="menuPoziome">
+		<ul class="ukladPoziomy">
+			<li><a href="widok_produkty.php?product=szafa&p=1" >SZAFY</a></li>
+			<li><a href="widok_produkty.php?product=lozko&p=1" >LOZKA</a></li>
+			<li><a href="widok_produkty.php?product=stol&p=1" >STOLY</a></li>
+			<li><a href="widok_produkty.php?product=krzeslo&p=1" >KRZESLA</a></li>
+			<li><a href="widok_produkty.php?product=drzwi&p=1" >DRZWI</a></li>
+		</ul>
+        </div>
+		
+        <div id="tresc" >
+<br/> DODAJ PRODUKT
+<form enctype="multipart/form-data" action="dodawanie_produktu.php" method="post" >
+<table>
+	<tr><td>Nazwa</td><td><input type="text" name="name"/></td></tr>
+	<tr><td>Cena</td><td><input type="text" name="cena"/></td></tr>
+	<tr><td>Sztuki</td><td><input type="text" name="sztuki"/></td></tr>
+	<tr><td>typ</td><td>
+	<select name="typ">
+	<option>szafa</option>
+	<option>lozko</option>
+	<option>stoly</option>
+	<option>krzesla</option>
+	<option>drzwi</option>
+	</select>
+	</td></tr>
+	<tr><td>Id producenta</td><td><input type="text" name="id_producenta"/></td></tr>
+	<tr><td>opis</td><td><textarea name="opis" cols="100" rows="10"></textarea></td></tr>
+</table>
+Wybierz zdjecie produktu<br/>
+<input type="hidden" name="MAX_FILE_SIZE" value="512000" />
+<input type="file" name="zdjecie"  />
+<input type="submit" value="wyślij" />
+</form>
+
+   <p tal:content="info"></p>
+		</div>
+		
+	</div>
+	</div>
+    <div id="stopka">
+    </div>
+
+</div>
+
+</body>
+</html>

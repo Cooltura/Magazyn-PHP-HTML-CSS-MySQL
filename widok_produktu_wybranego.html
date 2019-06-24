@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+<title>Przyklad - wzorzec MVC + panel administracyjny</title>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="mystyle.css" type="text/css" />
+</head>
+<body>
+
+<div id="strona">
+
+    <div id="naglowek">
+	<h2> <a href="widok_glowna.php"><img src="zdjecia/baner.jpg" alt="zdkecie"/></a> </h2>
+    </div>
+<div id="Kolumny">
+    <div id="kolumnaLewa">
+
+       
+
+        <div id="menuPionowe">
+		<ul class="ukladPionowy">
+
+			<li><a href="widok_nowe_produkty.php" ><br/>NOWOŚCI  </a></li>
+			<li><a href="widok_glowna.php?">O FIRMIE  </a></li>
+			<li><a href="widok_moje_konto.php"> MOJE KONTO  </a></li>
+			<li><a href="logout.php">WYLOGUJ SIĘ  </a></li>
+		
+		</ul>
+        </div>
+
+    </div>
+
+    <div id="kolumnaPrawa">
+
+        <div id="menuPoziome">
+		<ul class="ukladPoziomy">
+			<li><a href="widok_produkty.php?product=szafa&p=1" >SZAFY</a></li>
+			<li><a href="widok_produkty.php?product=lozko&p=1" >LOZKA</a></li>
+			<li><a href="widok_produkty.php?product=stol&p=1" >STOLY</a></li>
+			<li><a href="widok_produkty.php?product=krzeslo&p=1" >KRZESLA</a></li>
+			<li><a href="widok_produkty.php?product=drzwi&p=1" >DRZWI</a></li>
+		</ul>
+        </div>
+		
+      <div id="tresc" >
+	  <script>
+function myFunction(x) {
+	var y=parseInt(document.getElementById("sztuki").value);
+	var z=parseInt(x);
+
+	if(y>0 && z>y)
+	  alert("Zakupiono towar ");
+	else if(y>z)
+	alert("podales za wysoka liczbe"); 
+	else if(y==0)
+	alert("podales 0");
+	else
+	 alert("Podano złą liczbe");
+	}
+function change(x){
+if(x==0)
+  document.getElementById('myopis').innerHTML = '${Products/description}';
+   else if(x==1)
+   document.getElementById('myopis').innerHTML = 'Opis produktu';
+}
+</script>
+
+	  <table class="wybrany_produkt">
+<tr>
+		<td class="wybrany_produkt_1"><img src='zdjecia/${Products/foto}'  style="height:300px;width:300px;" alt="zdkecie" /></td> 
+	<td class="wybrany_produkt_2">${Products/name}<br/>
+	${Products/cost}<br/>
+	Dostepne : ${Products/quantity}   sztuk <br/>
+
+<form name='kupowanie' method='post' action='kupowanie.php?id=${Products/id}&cena=${Products/cost}&nazwa=${Products/name}&max=${Products/quantity}' enctype='multipart/form-data'>
+Sztuk:<input type='text' id='sztuki' name='sztuki' /><br/>
+ <input onclick="myFunction(${Products/quantity})" type='submit' value='Kup' /> </form>
+ 	<a href='edytowanie_produktu.php?id=${Products/id}&o=w' class="link">${pracownik}</a>
+	</td>
+	<td class="wybrany_produkt_3" style="text-align:center;">
+<input type="button" onclick="change(0)" value="Rozwin opis"/>
+<input type="button" onclick="change(1)" value="Zwin opis"/>
+<div id="myopis"> Opis produktu</div></td>
+</tr>
+</table>
+
+	</div>	
+	</div>
+	</div>
+    <div id="stopka">
+  Radoslaw Rudziewicz 27.11.2018
+    </div>
+
+</div>
+
+</body>
+</html>

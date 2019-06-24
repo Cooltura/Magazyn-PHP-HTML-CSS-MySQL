@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<title>logowanie</title>
+<meta charset="UTF-8" />
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+</head>
+<body>
+
+		
+		<div id="logowanie">
+
+			<h3><br><br><br><center>Logowanie </h3>
+
+			<form name="passwordform" method="post" action="clogin.php" enctype="multipart/form-data">
+			  <center>  Login: <input type="login" name="login" autofocus="autofocus" /><br><br>
+			   <center>	Haslo: <input type="password" name="password" autofocus="autofocus" /><br><br>
+				<input type="submit" value="Zaloguj" />
+			</form>
+			
+			
+			<span class="info" tal:condition="exists: info" tal:content="info"></span>
+
+		</div>    
+
+</body>
+</html>

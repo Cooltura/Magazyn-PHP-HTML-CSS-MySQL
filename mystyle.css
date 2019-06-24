@@ -1,0 +1,247 @@
+
+#strona { 
+}
+#naglowek img{
+	width:100%;	
+}
+#naglowek {
+    text-align : center;
+	height:155px;
+}
+#stopka {
+	padding-top: 20px; 
+    margin-top     : 5px;
+    border     : 0px; 
+    background-color : black;
+    clear      : both;
+    text-align : right;
+	color: white;
+}
+#Kolumny { 
+	overflow: hidden; 
+}
+
+#Kolumny div { 
+	margin-bottom: -1000px;
+	padding-bottom: 1000px;
+}
+#kolumnaLewa {
+    width      : 16%;
+    float      : left;  	
+}
+
+#kolumnaPrawa {
+    float       : right;
+    width      : 83%;
+}
+
+#menuPionowe {
+    width      : 100%;
+    background-color : black;
+
+}
+
+#menuPoziome {
+    margin      : 0px;
+    border-left : 0px;
+    padding     : 0px;
+    width       : 100%;
+   	height:50px;
+    background-color : black;
+	word-spacing:30px;
+	 text-align : center;
+}
+
+#tresc {
+	text-align:justify;
+    margin      : 0px;
+    border      : 0px;
+    border-left : 0px;
+    border-style: solid; 
+    width       : 100%;
+    background-color : white;
+    font-family : Serif;
+}
+#tresc2 {
+	text-align:justify;
+    margin      : 0px;
+    border      : 0px;
+    border-left : 0px;
+    border-style: solid; 
+    width       : 25%;
+    background-color : white;
+    font-family : Serif;
+	position: relative; 
+	float: left
+}
+ul.ukladPionowy, ul.ukladPionowy li {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+ul.ukladPionowy {
+	width: 180px;
+}
+
+ul.ukladPionowy a:link, ul.ukladPionowy a:visited {
+	display: block;
+	width: 166px;
+	text-decoration: none;
+font-size:x-large;
+	color: white;
+	padding: 10px;
+
+}
+ul.ukladPoziomy a:link, ul.ukladPoziomy a:visited {
+	text-decoration: none;
+	width: 200px;
+	text-align: center;
+	padding: 5px 2;
+	font-weight: bold;
+	font-size:xx-large;
+	color: white;
+}
+
+ul.ukladPoziomy, ul.ukladPoziomy li {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	padding-left:50px;
+}
+
+
+ul.ukladPoziomy {
+	position: absolute;
+	text-align: center;
+	word-spacing:30px;
+}
+
+ul.ukladPoziomy li {
+	float: left;
+}
+#tresc2 a{
+	color:gray;	
+	font-size:xx-large;
+	text-decoration:none;
+}
+#tresc table{
+
+}
+.opis{
+	width:80%;
+	
+}
+.zdjecie{
+	width:10%;
+}
+
+
+td.zakupione_produkty{
+background-color:silver;
+width:20%;
+  color: white;
+}
+table.zakupione_produkty{
+width:100%;
+  color: white;
+}
+table.uzytkownicy{
+width:70%;
+ color: gray;
+ text-decoration:none;
+}
+td.uzytkownicy{
+background-color:silver;
+width:35%;
+font-size:xx-large;
+text-decoration:none;
+}
+th.uzytkownicy{
+background-color:silver;
+width:35%;
+color:white;
+font-size:xx-large;
+text-decoration:none;
+}
+
+table.statystyki_tabele{
+ width:90%;
+ color: white;
+ text-decoration:none;
+}
+td.statystyki_tabele{
+background-color:silver;
+width:35%;
+font-size:xx-large;
+text-decoration:none;
+}
+
+table.wybrany_produkt{
+	width:100%;
+  color: white;
+}
+td.wybrany_produkt_1{
+width:300px;
+}
+td.wybrany_produkt_2{
+background-color:silver;
+font-size:xx-large;
+text-align:center;
+width:500px;
+}
+td.wybrany_produkt_3{
+background-color:silver;
+width:500px;
+
+}
+
+table.dane_uzytkownika{
+	color:gray;
+	font-size:large;
+}
+
+p.dane_uzytkownika{
+color:gray;
+font-size:large;	
+}
+p.statystyki{
+color:gray;
+font-size:large;	
+}
+a:link {
+  color: white;
+}
+a:visited {
+  color: white;
+}
+#tresc a.link {
+  	color:white;	
+	font-size:xx-large;
+	text-decoration:none;
+}
+#tresc a.link:hover {
+  color: yellow;
+}
+a.link_statystyki{
+color:gray;
+font-size:xx-large;
+text-decoration:none;
+}
+#tresc a.link_statystyki:hover {
+  color: yellow;
+}
+#tresc a.uzytkownicy{
+color:gray;
+font-size:xx-large;
+text-decoration:none;
+}
+#tresc a.uzytkownicy:hover {
+  color: yellow;
+}
+#tresc2 a.uzytkownicy:hover {
+  color: yellow;
+}

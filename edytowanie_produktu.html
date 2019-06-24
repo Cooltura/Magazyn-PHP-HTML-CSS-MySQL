@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+<title>Przyklad - wzorzec MVC + panel administracyjny</title>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="mystyle.css" type="text/css" />
+</head>
+<body>
+
+<div id="strona">
+
+    <div id="naglowek">
+	<h2> <a href="widok_glowna.php"><img src="zdjecia/baner.jpg" alt="zdkecie"/></a> </h2>
+    </div>
+<div id="Kolumny">
+    <div id="kolumnaLewa">
+
+       
+
+        <div id="menuPionowe">
+		<ul class="ukladPionowy">
+
+			<li><a href="widok_nowe_produkty.php" ><br/>NOWOŚCI  </a></li>
+			<li><a href="widok_glowna.php?">O FIRMIE  </a></li>
+			<li><a href="widok_moje_konto.php"> MOJE KONTO  </a></li>
+			<li><a href="logout.php">WYLOGUJ SIĘ  </a></li>
+		
+		</ul>
+        </div>
+
+    </div>
+
+    <div id="kolumnaPrawa">
+
+        <div id="menuPoziome">
+		<ul class="ukladPoziomy">
+			<li><a href="widok_produkty.php?product=szafa&p=1" >SZAFY</a></li>
+			<li><a href="widok_produkty.php?product=lozko&p=1" >LOZKA</a></li>
+			<li><a href="widok_produkty.php?product=stol&p=1" >STOLY</a></li>
+			<li><a href="widok_produkty.php?product=krzeslo&p=1" >KRZESLA</a></li>
+			<li><a href="widok_produkty.php?product=drzwi&p=1" >DRZWI</a></li>
+		</ul>
+        </div>
+		
+        <div id="tresc" >
+<br/> EDYTUJ PRODUKT
+<form enctype="multipart/form-data" action="edytowanie_produktu.php?id=${Produkt/id}&o=e&z=${Produkt/foto}" method="post" >
+<table>
+	<tr><td>Nazwa</td><td><input type="text" name="name" value='${Produkt/name}' /></td></tr>
+	<tr><td>Cena</td><td><input type="text" name="cena" value='${Produkt/cost}' /></td></tr>
+	<tr><td>Sztuki</td><td><input type="text" name="sztuki" value='${Produkt/quantity}'/></td></tr>
+	<tr><td>typ</td><td>
+	<select name="typ" >
+	<option value="szafa">szafa</option>
+	<option value="lozko">lozko</option> 
+	<option value="stoly">stoly</option>
+	<option value="krzesla">krzesla</option>
+	<option value="drzwi">drzwi</option>
+	</select>
+	Pamietaj aby sprawdzic typ</td></tr>
+	<tr><td>Id producenta</td><td><input type="text" name="id_producenta" value='${Produkt/id_producer}'/></td></tr>
+	<tr><td>opis</td><td><textarea name="opis" cols="100" rows="10">${Produkt/description}</textarea></td></tr>
+</table>
+Wybierz zdjecie produktu<br/>
+<input type="hidden" name="MAX_FILE_SIZE" value="512000" />
+<input type="file" name="zdjecie"  />
+<input type="submit" value="wyślij" />
+</form>
+
+		</div>
+		
+	</div>
+	</div>
+    <div id="stopka">
+    </div>
+
+</div>
+
+</body>
+</html>

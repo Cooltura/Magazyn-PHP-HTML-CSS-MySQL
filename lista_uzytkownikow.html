@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+<title>Przyklad - wzorzec MVC + panel administracyjny</title>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="mystyle.css" type="text/css" />
+</head>
+<body>
+
+<div id="strona">
+
+    <div id="naglowek">
+	<h2> <a href="widok_glowna.php"><img src="zdjecia/baner.jpg" alt="zdkecie"/></a> </h2>
+    </div>
+<div id="Kolumny">
+    <div id="kolumnaLewa">
+
+       
+
+        <div id="menuPionowe">
+		<ul class="ukladPionowy">
+
+			<li><a href="widok_nowe_produkty.php" ><br/>NOWOŚCI  </a></li>
+			<li><a href="widok_glowna.php?">O FIRMIE  </a></li>
+			<li><a href="widok_moje_konto.php"> MOJE KONTO  </a></li>
+			<li><a href="logout.php">WYLOGUJ SIĘ  </a></li>
+		
+		</ul>
+        </div>
+
+    </div>
+
+    <div id="kolumnaPrawa">
+
+        <div id="menuPoziome">
+		<ul class="ukladPoziomy">
+			<li><a href="widok_produkty.php?product=szafa&p=1" >SZAFY</a></li>
+			<li><a href="widok_produkty.php?product=lozko&p=1" >LOZKA</a></li>
+			<li><a href="widok_produkty.php?product=stol&p=1" >STOLY</a></li>
+			<li><a href="widok_produkty.php?product=krzeslo&p=1" >KRZESLA</a></li>
+			<li><a href="widok_produkty.php?product=drzwi&p=1" >DRZWI</a></li>
+		</ul>
+        </div>
+		
+        <div id="tresc" >
+
+<table class='uzytkownicy'><tr>
+<th class='uzytkownicy'><b>Imie</b></th>
+<th class='uzytkownicy'><b>Nazwisko</b></th>
+<th class='uzytkownicy'><b>Stanowisko</b></th>
+</tr>
+</table>
+		<table tal:repeat="item list" class='uzytkownicy' >
+<tr>
+<td class='uzytkownicy'><a href='widok_moje_konto.php?i=${item/id}' class='uzytkownicy'>${item/imie}</a> </td>
+<td class='uzytkownicy'><a href='widok_moje_konto.php?i=${item/id}' class='uzytkownicy'>${item/nazwisko}</a></td>
+<td class='uzytkownicy'>${item/pracownik}</td>
+</tr>
+</table>
+
+
+		</div>
+		
+	</div>
+	</div>
+    <div id="stopka">
+    </div>
+
+</div>
+
+</body>
+</html>
